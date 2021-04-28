@@ -27,6 +27,7 @@ class ProductPriceValidation extends FormRequest
         return [
             'price' => 'required|min:0|numeric',
             'product_id' => 'required|exists:products,id',
+            
             'special_price' => 'nullable|numeric',
             'special_price_type' => 'required_with:special_price|in:fixed,percent',
             'special_price_start' => 'required_with:special_price|date_format:Y-m-d',

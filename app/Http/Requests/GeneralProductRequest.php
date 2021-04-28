@@ -28,6 +28,8 @@ class GeneralProductRequest extends FormRequest
             'name' => 'required|max:100',
             'slug' => 'required|unique:products,slug',
             'description' => 'required|max:1000',
+            'size'=>'required',
+            'color'=>'required',
             'short_description' => 'nullable|max:500',
             'categories' => 'array|min:1', //[]
             'categories.*' => 'numeric|exists:categories,id',

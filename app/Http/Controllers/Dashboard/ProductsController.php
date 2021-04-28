@@ -82,7 +82,7 @@ class ProductsController extends Controller
 
         try{
 
-            Product::whereId($request -> product_id) -> update($request -> only(['price','special_price','special_price_type','special_price_start','special_price_end']));
+            Product::whereId($request -> product_id) -> update($request -> only(['price','size','color','special_price','special_price_type','special_price_start','special_price_end']));
 
             return redirect()->route('admin.products')->with(['success' => 'تم التحديث بنجاح']);
         }catch(\Exception $ex){
